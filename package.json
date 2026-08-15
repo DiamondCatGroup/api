@@ -2,13 +2,13 @@
   "name": "dcgapi",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/scrajang-studios/api#readme",
+  "homepage": "https://github.com/DiamondCatGroup/api#readme",
   "bugs": {
-    "url": "https://github.com/scrajang-studios/api/issues"
+    "url": "https://github.com/DiamondCatGroup/api/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scrajang-studios/api.git"
+    "url": "git+https://github.com/DiamondCatGroup/api.git"
   },
   "license": "GPL-3.0",
   "author": "dcg",
