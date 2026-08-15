@@ -1,0 +1,23 @@
+{
+  "name": "dcgapi",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/scrajang-studios/api#readme",
+  "bugs": {
+    "url": "https://github.com/scrajang-studios/api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scrajang-studios/api.git"
+  },
+  "license": "GPL-3.0",
+  "author": "dcg",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@vercel/node": "^5.10.1"
+  }
+}
