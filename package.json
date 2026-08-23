@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@vercel/node": "^5.10.1",
+    "express": "^5.2.1",
     "scratchssenger": "github:DiamondCatGroup/scratchssenger#main"
   }
 }
