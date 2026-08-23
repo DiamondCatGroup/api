@@ -1,8 +1,10 @@
-const { DB_NAME, DB_IP, DB_PORT, DB_SECRET } = process.env
+import config from "../../config.js"
+
+const { DB_SECRET } = process.env
+const { DB_IP, DB_PORT } = config
 const DB_URL = [DB_IP, ":", DB_PORT]
 
 export {
-    DB_NAME,
     DB_IP,
     DB_PORT,
     DB_SECRET,
