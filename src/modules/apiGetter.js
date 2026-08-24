@@ -16,6 +16,10 @@ class ApiGetter {
     responseSend (res, code, resp) {
         return res.status(code).send(resp)
     }
+
+    start (IP, PORT, handle) {
+        this.app.listen(PORT, IP, handle || (() => { console.log(`PORT ${PORT}, IP ${IP}`) }))
+    }
 }
 
 export {

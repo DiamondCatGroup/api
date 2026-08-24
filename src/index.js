@@ -14,3 +14,5 @@ api.newGetter("get", "/", (req, res) => {
         }
     })
 })
+
+api.start("0.0.0.0", "8602")
