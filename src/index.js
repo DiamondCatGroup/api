@@ -1,7 +1,9 @@
 import api from "./api.js";
 import DcgDB from "./util/db.js";
+import express from "express";
 import { securityCheck } from "./security.js";
 
+api.use(express.json({ limit: "4mb" }))
 api.securityCheck = securityCheck.generate()
 
 api.newGetter("get", "/", (req, res) => {

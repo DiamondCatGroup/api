@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@vercel/node": "^5.10.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "scratchssenger": "github:DiamondCatGroup/scratchssenger#main"
   }
