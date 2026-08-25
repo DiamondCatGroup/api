@@ -1,21 +1,63 @@
 import api from "../api.js";
 import { DB_URL } from "./env.js";
 
-class DcgDB {
+class Server8787DB {
 
     #DB_SECRET = ""
 
-    constructor (project, DB_SECRET) {
-        this.group = "dcg"
+    constructor (group, project, DB_SECRET) {
+        this.group = group
         this.project = project
         this.#DB_SECRET = DB_SECRET
     }
 
-    write (file, content) {}
+    async write (file, newContent) {
+        const DB_SECRET = this.#DB_SECRET
+        const project = this.project
+        const projectGroup = this.project
+        const connecT = await (await fetch(`https://${DB_URL}/files/write/`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                "bypass-tunnel-reminder": "true"
+            },
+            body: JSON.stringify({
+                DB_SECRET,
+                projectGroup,
+                project,
+                file,
+                newContent
+            })
+        })).json()
+        const isOk = connecT.ok === true
+        return isOk ? connecT.result : connecT.error
+    }
 
-    read (file) {}
+    async read (file) {
+        const DB_SECRET = this.#DB_SECRET
+        const project = this.project
+        const projectGroup = this.project
+        const connecT = await (await fetch(`https://${DB_URL}/files/read/`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                "bypass-tunnel-reminder": "true"
+            },
+            body: JSON.stringify({
+                DB_SECRET,
+                projectGroup,
+                project,
+                file
+            })
+        })).json()
+        const isOk = connecT.ok === true
+        return isOk ? connecT.result : connecT.error
+    }
 }
 
+const DcgDB = Server8787DB
+
 export {
-    DcgDB as default
+    DcgDB as default,
+    Server8787DB
 }
