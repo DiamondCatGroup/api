@@ -7,6 +7,7 @@ api.use(express.json({ limit: "4mb" }))
 api.securityCheck = securityCheck.generate()
 
 import "./server/scratchssenger.js"
+import "./server/geometryscratch.js"
 
 api.newGetter("get", "/", (req, res) => {
     return api.responseJson(res, 200, {

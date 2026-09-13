@@ -13,13 +13,14 @@
   "license": "GPL-3.0",
   "author": "dcg",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js --env-file .env"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "scratchssenger": "github:DiamondCatGroup/scratchssenger#main"
   }

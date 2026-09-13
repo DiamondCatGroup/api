@@ -1,4 +1,7 @@
 import config from "../../config.js"
+import { configDotenv } from "dotenv"
+
+configDotenv()
 
 const { DB_SECRET } = process.env
 const { DB_IP, DB_PORT } = config.env
