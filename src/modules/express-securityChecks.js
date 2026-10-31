@@ -24,12 +24,12 @@ class SecurityChecker {
                 }
                 if (!this.isAuth) {
                     if (!this.isNoAuthAccess) {
-                        return res.status(401).json({ ok: false, error: "No authorized" })
+                        return res.status(401).json({ ok: false, error: "Not authorized" })
                     }
                 }
                 if (this.useIpWhitelist) {
                     if (!this.whitelistIPs.includes(IP)) {
-                        return res.status(403).json({ ok: false, error: "IP white list is no includes your IP address" })
+                        return res.status(403).json({ ok: false, error: "IP whitelist doesnt include your IP address" })
                     }
                 }
                 next()
