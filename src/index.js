@@ -8,6 +8,7 @@ api.securityCheck = securityCheck.generate()
 
 import "./server/scratchssenger.js"
 import "./server/geometryscratch.js"
+import "./server/general.js"
 
 api.newGetter("get", "/", (req, res) => {
     return api.responseJson(res, 200, {
