@@ -1,4 +1,5 @@
 this is dcg api
-/general/ - main api
-/scratchssenger/ - scratchssenger api
-/geometry-scratch/ - geometry scratch api
+# Endpoints
+* /general/ - main api
+* /scratchssenger/ - scratchssenger api
+* /geometry-scratch/ - geometry scratch api
